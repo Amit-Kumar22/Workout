@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="m-0 p-0 h-screen">
+    <div class="flex gap-16 flex-col">
+      <nav class="flex items-center justify-between">
+        <div class="text-1xl font-medium">
+          <span id="datetime"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="../Asserts/Cellular Connection.png" alt="cellular" />
+          <img src="../Asserts/Wifi.png" alt="wifi" />
+          <img src="../Asserts/Capacity.png" alt="capacity" />
+        </div>
+      </nav>
+
+      <div class="w-11/12 m-auto flex flex-col gap-10">
+        <p class="text-3xl font-medium">Welcome Back</p>
+
+        <div class="flex flex-col gap-6">
+          <input
+            id="email"
+            class="bg-gray-300 rounded-lg p-3 w-full"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            id="password"
+            class="bg-gray-300 rounded-lg p-3 w-full"
+            type="password"
+            placeholder="Password"
+          />
+
+        </div>
+
+       <div class="my-32 flex flex-col gap-4">
+        <button
+        id="signup-btn"
+        class="bg-blue-600 text-white p-4 w-full rounded-lg"
+      >
+        Login
+      </button>
+
+      <div class="flex items-center justify-evenly w-full">
+          <hr class="w-5/12 h-0.5 bg-gray-400">
+          <p>or</p>
+          <hr class="w-5/12 h-0.5 bg-gray-400">
+      </div>
+
+      <div class="flex w-1/4 m-auto justify-between">
+          <img class="border-gray-500 border-2 border-solid p-3 rounded-lg" src="../Asserts/google.png" alt="google" >
+          <img class="border-gray-500 border-2 border-solid p-3 rounded-lg" src="../Asserts/facebookpng.png" alt="facebook" >
+      </div>
+
+      
+
+      <div class="w-4/5 m-auto">
+          <p>Don’t have an account yet? <a class="text-blue-800" href="../login/login.html">Create an account</a></p>
+      </div>
+       </div>
+      </div>
+    </div>
+
+    <script src="./signup.js"></script>
+  </body>
+</html>

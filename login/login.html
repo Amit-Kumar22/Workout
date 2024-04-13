@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex gap-16 flex-col">
+      <nav class="flex items-center justify-between">
+        <div class="text-1xl font-medium">
+          <span id="datetime"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="../Asserts/Cellular Connection.png" alt="cellular" />
+          <img src="../Asserts/Wifi.png" alt="wifi" />
+          <img src="../Asserts/Capacity.png" alt="capacity" />
+        </div>
+      </nav>
+
+      <div class="w-19/20 m-auto flex flex-col gap-10">
+        <p class="text-3xl font-medium">Create an account</p>
+
+        <div class="flex flex-col gap-6">
+          <input
+            id="fname"
+            class="bg-gray-300 rounded-lg p-3 w-full"
+            type="text"
+            placeholder="First Name"
+          />
+          <input
+            id="lname"
+            class="bg-gray-300 rounded-lg p-3 w-full"
+            type="text"
+            placeholder="Last Name"
+          />
+          <input
+            id="email"
+            class="bg-gray-300 rounded-lg p-3 w-full"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            id="password"
+            class="bg-gray-300 rounded-lg p-3 w-full"
+            type="password"
+            placeholder="Password"
+          />
+
+          <div>
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"
+              >By proceeding, I agree to all T&C and Privacy Policy</label
+            >
+          </div>
+        </div>
+        <button
+          id="create-btn"
+          class="bg-blue-600 text-white p-4 w-full rounded-lg"
+        >
+          Create an Account
+        </button>
+
+        <div class="flex items-center justify-evenly w-full">
+            <hr class="w-5/12 h-0.5 bg-gray-400">
+            <p>or</p>
+            <hr class="w-5/12 h-0.5 bg-gray-400">
+        </div>
+
+        <div class="flex w-1/4 m-auto justify-between">
+            <img class="border-gray-500 border-2 border-solid p-3 rounded-lg" src="../Asserts/google.png" alt="google" >
+            <img class="border-gray-500 border-2 border-solid p-3 rounded-lg" src="../Asserts/facebookpng.png" alt="facebook" >
+        </div>
+
+        
+
+        <div class="w-3/5 m-auto">
+            <p>Already have an account? <a class="text-blue-800" href="../signup/signup.html">Login</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>

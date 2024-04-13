@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="m-0 p-0 h-screen">
+    <nav class="flex items-center justify-between">
+      <div class="text-1xl font-medium">
+        <span id="datetime"></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <img src="./Asserts/Cellular Connection.png" alt="cellular" />
+        <img src="./Asserts/Wifi.png" alt="wifi" />
+        <img src="./Asserts/Capacity.png" alt="capacity" />
+      </div>
+    </nav>
+
+    <div class="float-end text-blue-500 mr-2 mt-4"><a href="./login/login.html">Skip</a></div>
+
+    <section class="w-3/5 h-1/2 mx-auto mt-20">
+      <div class="slider">
+        <div id="slide1" class="slide">
+          <img src="./Asserts/image-1.png" alt="img-1" class="object-cover" />
+          <div class="note">
+            <h1 class="text-3xl font-medium">Track Your Goal</h1>
+            <p>
+              Don’t worry if you have trouble determining your goals, We can
+              help you determine your goals and track your goals
+            </p>
+          </div>
+        </div>
+
+        <div id="slide2" class="slide hidden">
+          <img src="./Asserts/image-2.png" alt="img-2" />
+          <div class="note">
+            <h1 class="text-3xl font-medium">Get Burn</h1>
+            <p class="mb-4">
+              Let’s keep burning to achieve your goals, it hurts only
+              temporarily, if you give up now you will be in pain forever
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="float-end relative -bottom-36">
+        <button
+        id="nextBtn"
+      >
+       <img src="./Asserts/Group 1.png" alt="btn" >
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

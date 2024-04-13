@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body class="m-0 p-0 h-full w-full">
+    <div class="flex gap-16 flex-col">
+      <nav class="flex items-center justify-between">
+        <div class="text-1xl font-medium">
+          <span id="datetime"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="../Asserts/Cellular Connection.png" alt="cellular" />
+          <img src="../Asserts/Wifi.png" alt="wifi" />
+          <img src="../Asserts/Capacity.png" alt="capacity" />
+        </div>
+      </nav>
+
+      <div class="bg-blue-200 w-3 ml-5">
+        <button id="nextBtn">
+       <img src="../Asserts/arrow.png" alt="btn" width="10" height="10px" >
+      </button>
+    </div>
+      <div class="w-10/12 mx-auto flex flex-col gap-10 -my-24">
+        <div class="slider">
+          <div id="slide1" class="slide">
+            <p class="text-3xl font-medium w-3/10 m-auto">Workout Tracker</p>
+            <div class="w-10/12" id="chart"></div>
+
+            <div
+              class="flex items-center gap-2 p-2 rounded-lg w-full h-14 bg-gradient-to-r from-violet-200 to-white-400-4/5 mt-20"
+            >
+              <img src="../Asserts//alert-triangle.png" alt="alert" />
+              <p class="text-sm">
+                You've burned fewer calories than yesterday. Time to get moving!
+              </p>
+            </div>
+
+            <div class="flex justify-between w-full items-center mt-6">
+              <p class="text-1xl font-medium">Upcoming Workout</p>
+              <p>see more</p>
+            </div>
+
+            <div class="flex flex-col gap-10 mt-6">
+              <div
+                class="flex justify-between items-center rounded-lg shadow-2xl p-4 w-full"
+              >
+                <img src="../Asserts/dumble.png" alt="dumble" />
+                <div class="mr-16">
+                  <p class="text-sm font-medium">Full Body Workout</p>
+                  <p class="text-xs">Today 3pm</p>
+                </div>
+
+                <label class="inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                    id="aa"
+                  />
+                  <label for="aa" class="opacity-0">fst</label>
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:peer-focus:ring-blue-800 dark:bg-blue-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                  ></div>
+                </label>
+              </div>
+
+              <div
+                class="flex justify-between items-center rounded-lg shadow-2xl p-4 w-full"
+              >
+                <img src="../Asserts/stretch.png" alt="dumble" />
+                <div class="mr-16">
+                  <p class="text-sm font-medium">Upper Body Workout</p>
+                  <p class="text-xs">4 Feb, 3:30 pm</p>
+                </div>
+
+                <label class="inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                    checked
+                    id="sec"
+                  />
+                  <label for="sec" class="opacity-0">sec</label>
+                  <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:peer-focus:ring-blue-800 dark:bg-blue-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="mt-24">
+              <p class="text-1xl font-medium">What Do You Want to Train</p>
+              <div
+                class="bg-blue-200 p-4 rounded-lg flex items-center justify-between mt-6"
+              >
+                <div>
+                  <p>Full Body Workout</p>
+                  <p class="text-sm">Arms</p>
+                  <p class="text-sm">Chest</p>
+                </div>
+                <img src="../Asserts//dumble2.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- calendar -->
+
+          <div id="slide2" class="slide hidden">
+            <div class="w-11/12 m-auto flex flex-col">
+              <p class="w-3/5 m-auto text-2xl font-medium" >Workout Schedule</p>
+              <div id="calendar" class="h-screen mt-20"></div>
+            </div>
+          </div>
+
+          <!-- ----- -->
+
+        </div>
+      </div>
+
+      <div class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="#">
+              <span class="icon">
+                <img src="../Asserts//Home.png" alt="" />
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <img src="../Asserts//Group.png" alt="" />
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <img
+                  src="../Asserts/Search.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <img src="../Asserts/Camera.png" alt="" />
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <img src="../Asserts/Person.png" alt="" />
+              </span>
+            </a>
+          </li>
+          <div class="indicator"></div>
+        </ul>
+      </div>
+    </div>
+    <script src="worlout.js"></script>
+  </body>
+</html>
